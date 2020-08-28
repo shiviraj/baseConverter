@@ -9,8 +9,7 @@ class BaseConverter extends React.Component {
   }
 
   handleChange(value, base) {
-    const number = parseInt(value, base) || 0;
-    this.setState({ value: number });
+    this.setState({ value: parseInt(value, base) });
   }
 
   render() {
