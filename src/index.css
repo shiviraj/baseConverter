@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.base {
+  display: flex;
+  width: 600px;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  margin: 0 auto;
+}
+.base label {
+  width: 150px;
+  padding: 4px;
+}
+.base input {
+  padding: 4px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-left: 1px solid #aaa;
+  font-size: 16px;
+}
+.base:last-child {
+  border-bottom: 1px solid #aaa;
+}
+span {
+  margin: 0 20px;
+}
