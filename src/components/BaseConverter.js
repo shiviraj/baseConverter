@@ -8,23 +8,19 @@ class BaseConverter extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(value, base) {
-    this.setState({ value: parseInt(value, base) });
+  handleChange(value) {
+    this.setState({ value });
   }
 
   render() {
-    const baseComponents = [];
-
-    for (let base = 2; base <= 16; base++) {
-      baseComponents.push(
-        <BaseNumber
-          base={base}
-          key={base}
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      );
-    }
+    const baseComponents = Array.from(new Array(16)).map((_, index) => (
+      <BaseNumber
+        base={index + 2}
+        key={index}
+        value={this.state.value}
+        onChange={this.handleChange}
+      />
+    ));
 
     return (
       <div className="main-container">

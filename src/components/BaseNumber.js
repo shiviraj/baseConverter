@@ -7,7 +7,7 @@ export default ({ base, value, onChange }) => {
       <input
         type="text"
         value={value.toString(base)}
-        onChange={({ target }) => onChange(target.value, base)}
+        onChange={({ target }) => onChange(parseInt(target.value, base))}
       />
     </div>
   );
